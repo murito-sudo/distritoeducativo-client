@@ -23,13 +23,11 @@ class ArticleId extends Component{
 	componentDidMount() {
 
 		var datos = this.props.match.params.id;
-		axios.get("/getArticle/:id", {params: {
+		axios.get("https://distritoeducativo.herokuapp.com/getArticle/:id", {params: {
 				    	theId: datos
-				    }}).then(response => {
+				    }, headers: {"Access-Control-Allow-Origin": true}}).then(response => {
 				    	
 						this.setState({article: response.data});
-
-						
 		});
 
 	
