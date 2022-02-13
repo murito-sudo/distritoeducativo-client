@@ -42,10 +42,10 @@ class News extends Component{
 		
 		if(data === undefined || Number(data) === 1){
 			this.setState({index: 1}, () => {
-				axios.get("https://distritoeducativo.herokuapp.com/news/:id", {params: {theIndex: this.state.index}}).then(response => {
+				axios.get("https://distritoeducativo.herokuapp.com/news/:id", {params: {theIndex: this.state.index}}, headers: {"Access-Control-Allow-Origin": "*"}).then(response => {
 		 			this.setState({news: [...this.state.news, response.data]});
 		 			this.setState({news: this.state.news[0]});
-		 			axios.get("https://distritoeducativo.herokuapp.com/totalPages", {params: {theCount: this.state.index}}).then(responses => {
+		 			axios.get("https://distritoeducativo.herokuapp.com/totalPages", {params: {theCount: this.state.index}}, headers: {"Access-Control-Allow-Origin": "*"}).then(responses => {
 		 				this.setState({totalPages: responses.data.paginationFull});
 		 				for(var i = responses.data.paginationCurrent; i <= responses.data.paginationTotal; i++){
 		 					this.setState({paginationResult: [...this.state.paginationResult, i]});
@@ -57,14 +57,14 @@ class News extends Component{
 			});
 		}else{
 			this.setState({index: data}, () => {
-					axios.get("https://distritoeducativo.herokuapp.com/news/:id", {params: {theIndex: this.state.index}}).then(response => {
+					axios.get("https://distritoeducativo.herokuapp.com/news/:id", {params: {theIndex: this.state.index}}, headers: {"Access-Control-Allow-Origin": "*"}).then(response => {
 						if(response.data === "error"){
 							var newsPagination = document.getElementsByClassName("NewsPagination");
 							newsPagination[0].style.display = "none";
 						}else{
 							this.setState({news: [...this.state.news, response.data]});
 			 				this.setState({news: this.state.news[0]});
-			 				axios.get("https://distritoeducativo.herokuapp.com/totalPages", {params: {theCount: this.state.index}}).then(responses => {
+			 				axios.get("https://distritoeducativo.herokuapp.com/totalPages", {params: {theCount: this.state.index}}, headers: {"Access-Control-Allow-Origin": "*"}).then(responses => {
 			 					this.setState({totalPages: responses.data.paginationFull});
 			 					for(var i = responses.data.paginationCurrent; i <= responses.data.paginationTotal; i++){
 				 					this.setState({paginationResult: [...this.state.paginationResult, i-1]});
