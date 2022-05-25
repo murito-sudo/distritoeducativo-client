@@ -26,6 +26,7 @@ export default function About(){
 
 						<div className="Images">
 							<img src={Image1} alt="" className="Image1" />
+							<br/>
 							<img src={Image2} alt="" className="Image2"/>
 
 						</div>

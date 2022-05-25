@@ -8,22 +8,32 @@ export default function Main(){
 			<div className="topBar">
 					<div className="Info">
 						<div className="InfoItem">
-							<Phone className="InfoIcon"/>
-							<span className="InfoText">+1 (809) 551 6632</span>
+							<div className="InfoItemArt">
+								<Phone className="InfoIcon"/>
+								<span className="InfoText">+1 (809) 551 6633</span>
+
+
+							</div>
+							
 
 						</div>
 
 						<div className="InfoItem">
-							<CardTravel className="InfoIcon" />
-							<span className="InfoText">Cristiancasablanca@hotmail.com</span>
+							<div className="InfoItemArt">
+								<CardTravel className="InfoIcon" />
+								<span className="InfoText"> Cristiancasablanca@whattobuy.com</span>
+
+
+							</div>
+							
 
 							
 						</div>
 
 					</div>
 
-
 			</div>
+			
 
 		)
 
