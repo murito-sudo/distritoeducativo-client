@@ -3,8 +3,6 @@
 	color: white;
 	padding: 16px 0px 36.8px;
 	font-size: 14.4px;
-
-
 }
 
 
@@ -12,14 +10,11 @@
 	margin-right: 50px;
 	display: flex;
 	float: right;
-
-
 }
 
 .InfoItem{
 	display: flex;
 	justify-content: space-around;
-
 }
 
 
@@ -32,3 +27,42 @@
 }
 
 
+
+
+
+@media (max-width: 800px){
+
+	.topBar{
+		padding: 8px;
+	}
+
+	.Info{
+		margin: 0;
+		float: none;
+		display: block;
+		text-align: center;
+	}
+
+	
+	.InfoItem{
+		text-align: center;
+		padding: 8px;
+	
+	}
+	
+	.InfoItemArt{
+		display: flex;
+		text-align: center;
+		
+
+	}
+
+	
+
+	.InfoItem:first-child{
+		margin: 0;
+	}
+
+
+
+}
