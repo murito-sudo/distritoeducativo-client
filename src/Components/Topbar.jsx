@@ -9,7 +9,7 @@ export default function Main(){
 					<div className="Info">
 						<div className="InfoItem">
 							<Phone className="InfoIcon"/>
-							<span className="InfoText">+1 (809) 551 6631</span>
+							<span className="InfoText">+1 (809) 551 6632</span>
 
 						</div>
 
